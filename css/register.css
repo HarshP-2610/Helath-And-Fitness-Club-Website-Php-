@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #000, #222);
+}
+
+.container {
+  display: flex;
+  width: 90%;
+  max-width: 1000px;
+  height: 600px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(0,0,0,0.6);
+  animation: slideUp 1s ease;
+}
+
+/* Left Panel */
+.left-panel {
+  flex: 1;
+  background: url('../assets/banner.jpg') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  background-blend-mode: multiply;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.left-panel h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+.left-panel h1 span {
+  color: #ffd700;
+}
+.left-panel p {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #ddd;
+}
+
+/* Right Panel (Form) */
+.form-panel {
+  flex: 1;
+  background: #fff;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-panel h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.form-panel form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-panel input,
+.form-panel select {
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: border-color 0.3s;
+}
+
+.form-panel input:focus,
+.form-panel select:focus {
+  border-color: #ffd700;
+  outline: none;
+}
+
+.form-panel button {
+  margin-top: 20px;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #ffd700, #ffcc00);
+  color: #000;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.form-panel button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(255, 215, 0, 0.6);
+}
+
+.login-link {
+  margin-top: 15px;
+  font-size: 0.95rem;
+  color: #555;
+  text-align: center;
+}
+
+.login-link a {
+  color: #ff9800;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+/* Animation */
+@keyframes slideUp {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Mobile Responsive */
+@media(max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+  .left-panel {
+    height: 200px;
+  }
+  .form-panel {
+    padding: 20px;
+  }
+}

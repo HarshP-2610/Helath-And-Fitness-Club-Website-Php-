@@ -1,0 +1,120 @@
+ .login-wrapper {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     height: 100vh;
+     background: #0f0f0f;
+     font-family: 'Poppins', sans-serif;
+   }
+
+   /* Removed image section */
+
+    /* Form section */
+   .login-form-section {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding: 20px;
+   }
+
+    .login-form-card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 40px;
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+      width: 100%;
+      max-width: 400px;
+      color: #fff;
+      text-align: center;
+    }
+
+    /* Headings */
+    .login-form-card h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    /* Inputs */
+    .login-form-card input[type="email"],
+    .login-form-card input[type="password"] {
+      width: 100%;
+      padding: 12px 16px;
+      margin: 10px 0;
+      border-radius: 10px;
+      border: none;
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      font-size: 15px;
+      outline: none;
+    }
+
+    .login-form-card input::placeholder {
+      color: #bbb;
+    }
+
+    /* Role toggle */
+    .role-toggle {
+      display: flex;
+      justify-content: space-around;
+      margin: 20px 0;
+    }
+
+    .role-toggle label {
+      padding: 8px 16px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      color: #ccc;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .role-toggle label.active {
+      background: linear-gradient(to right, #ff4343, #f0e964);
+      color: #000000;
+      font-weight: bold;
+    }
+
+    /* Button */
+    .login-btn {
+      width: 100%;
+      padding: 14px;
+      margin-top: 20px;
+      border: none;
+      border-radius: 10px;
+      background: linear-gradient(to right, #ff4343, #f0e964);
+      color: #000000;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .login-form-card .login-btn:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 20px rgba(255, 242, 127, 0.5);
+    }
+
+    /* Footer */
+    .register-text {
+      margin-top: 18px;
+      font-size: 0.95rem;
+      color: #ccc;
+    }
+
+    .register-link {
+      color: #fff175;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .register-link:hover {
+      text-decoration: underline;
+    }
+
+   /* Responsive */
+   @media (max-width: 768px) {
+     .login-form-card {
+       margin: 0 16px;
+     }
+   }

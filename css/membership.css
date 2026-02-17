@@ -1,0 +1,263 @@
+/* Membership Page Styling - Black & Yellow Theme */
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #0d0d0d;
+  color: #fff;
+}
+
+.plans-section {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.plans-header h1 {
+  font-size: 2.5rem;
+  color: #ffcc00;
+  margin-bottom: 10px;
+}
+
+.plans-header p {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-bottom: 40px;
+}
+
+.plans-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.plan-card {
+  background: #1a1a1a;
+  border: 2px solid #ffcc00;
+  border-radius: 12px;
+  padding: 30px 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 204, 0, 0.4);
+}
+
+.plan-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px rgba(255, 204, 0, 0.7);
+}
+
+.plan-card h2 {
+  font-size: 1.8rem;
+  color: #ffcc00;
+  margin-bottom: 15px;
+}
+
+.plan-description {
+  font-size: 1rem;
+  color: #ddd;
+  margin-bottom: 20px;
+}
+
+.plan-validity {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.plan-price {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #ffcc00;
+}
+
+.btn-join {
+  display: inline-block;
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #0d0d0d;
+  background: #ffcc00;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn-join:hover {
+  background: #ffd633;
+}
+.footer {
+  background: #111;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  overflow: hidden;
+  padding: 80px 20px 40px;
+}
+
+/* Gradient accent at top */
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(90deg, #FFD700, #FFA500);
+}
+
+/* Container */
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+/* About */
+.footer-about h3 {
+  font-size: 2rem;
+  color: #FFD700;
+  margin-bottom: 15px;
+}
+
+.footer-about p {
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.6;
+  max-width: 320px;
+}
+
+/* Links */
+.footer-links h4,
+.footer-contact h4,
+.footer-social h4 {
+  font-size: 1.2rem;
+  color: #FFD700;
+  margin-bottom: 15px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+  text-decoration: none;
+  color: #ccc;
+  transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: #FFD700;
+}
+
+/* Contact Info */
+.footer-contact p {
+  margin-bottom: 8px;
+  color: #ccc;
+}
+
+/* Social Icons */
+.footer-social .social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.footer-social .social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  background: #222;
+  color: #FFD700;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+
+.footer-social .social-icons a:hover {
+  background: #FFD700;
+  color: #111;
+  transform: scale(1.2);
+}
+
+/* Bottom text */
+.footer-bottom {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 35px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-about p {
+    max-width: 100%;
+    font-size: 0.95rem;
+  }
+
+  .footer-links ul li {
+    display: inline-block;
+    margin: 0 12px 12px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-about p {
+    display: none; /* hide long about text */
+  }
+
+  .footer-contact p:nth-child(3) {
+    display: none; /* hide address */
+  }
+
+  .footer-links h4 {
+    display: none; /* remove heading */
+  }
+
+  .footer-links ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .footer-links ul li {
+    margin: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-about h3 {
+    font-size: 1.5rem;
+  }
+
+  .footer-links ul li a {
+    font-size: 0.9rem;
+  }
+
+  .footer-social .social-icons {
+    gap: 10px;
+  }
+
+  .footer-social .social-icons a {
+    width: 32px;
+    height: 32px;
+  }
+}

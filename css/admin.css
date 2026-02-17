@@ -1,0 +1,185 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #000, #111);
+    margin: 0;
+    color: #fff;
+}
+
+/* Navbar */
+.admin-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #000;
+    border-bottom: 2px solid #ffd700;
+    color: #fff;
+    padding: 14px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.admin-navbar .logo {
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #ffd700;
+}
+
+.admin-navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 18px;
+}
+
+.admin-navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.admin-navbar ul li a:hover {
+    color: #ffd700;
+}
+
+/* Container */
+.admin-container {
+    padding: 24px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Section Card */
+.admin-section {
+    background: #1a1a1a;
+    padding: 20px;
+    margin-bottom: 24px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.6);
+    border: 1px solid #333;
+}
+
+.admin-section h2 {
+    margin-bottom: 16px;
+    color: #ffd700;
+}
+
+/* Dashboard cards */
+.dashboard-cards {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.dashboard-cards .card {
+    flex: 1;
+    min-width: 200px;
+    background: linear-gradient(135deg, #ffd700, #ffcc00);
+    color: #000;
+    padding: 24px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+    background: #111;
+    color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table th, table td {
+    border: 1px solid #333;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background: #222;
+    color: #ffd700;
+}
+
+table tr:nth-child(even) {
+    background: #1c1c1c;
+}
+
+/* Buttons */
+.btn, .btn-edit, .btn-delete, .btn-view {
+    padding: 8px 16px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-right: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn {
+    background: #28a745;
+    color: #fff;
+}
+
+.btn-edit {
+    background: #007bff;
+    color: #fff;
+}
+
+.btn-view {
+    background: #ffd700;
+    color: #000;
+    font-weight: 700;
+}
+
+.btn-delete {
+    background: #dc3545;
+    color: #fff;
+    font-weight: 700;
+}
+
+.btn:hover, .btn-edit:hover, .btn-delete:hover, .btn-view:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* Manage Contacts action buttons (match provided design) */
+#contacts table td .btn {
+    background: #ffd700; /* yellow */
+    color: #111;
+    padding: 6px 12px;
+    border-radius: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: none;
+}
+
+#contacts table td .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+}
+
+/* Delete button style in contacts action column */
+#contacts table td form .btn-danger,
+#contacts table td .btn-delete {
+    background: #ff4d4d; /* red */
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 12px;
+    border: none;
+}
+
+#contacts table td .btn-danger:hover,
+#contacts table td .btn-delete:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+}
